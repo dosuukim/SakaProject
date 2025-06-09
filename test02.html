@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset=""UTF-8">
+    <title>VS Code 사용</title>
+    
+</head>
+<body>
+    import time
+
+    import requests
+    from bs4 import BeautifulSoup
+    
+    url = "https://example.com"
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, "html.parser")
+    
+    print(soup.title.text)
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset=""UTF-8">
+    <title>VS Code 사용</title>
+    
+</head>
+<body>
+    from flask import Flask
+    import random
+    
+    app = Flask(__name__)
+    
+    @app.route("/")
+    def home():
+        number = random.randint(1, 100)
+        return f"<h1>랜덤 숫자: {number}</h1>"
+    
+    if __name__ == "__main__":
+        app.run(debug=True)
+</body>
+</html>
